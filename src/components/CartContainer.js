@@ -1,5 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
+import CartItem from './CartItem';
+
 
 function CartContainer() {
 
@@ -21,7 +23,9 @@ function CartContainer() {
         <header>
             <h2>Your wishlist</h2>
             <div>
-                {}
+                {cart.map((item)=>{
+                    return <CartItem key={item.id} {...item}/>
+                })}
             </div>
             <footer>
                 <hr />
