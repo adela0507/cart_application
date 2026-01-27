@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 
 function CartContainer() {
 
-    const [cart]=useGlobalContext();
+    const {cart,amount,total}=useGlobalContext();
 
     if(cart.length===0){
         return (
@@ -30,7 +30,7 @@ function CartContainer() {
             <footer>
                 <hr />
                 <div className="cost-total">
-                    <h4>total <span>$ 0.00</span></h4>
+                    <h4>total <span>$ {amount}</span></h4>
                     <button className='btn clear-btn' onClick={()=>console.log}></button>
                 </div>
             </footer>

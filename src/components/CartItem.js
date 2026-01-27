@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context'
 
 const CartItem = ({id,img,title,price,amount}) => {
 
-    cont[remove, increase,decrease,toggleAmount]=useGlobalContext();
+    const{remove, increase,decrease,toggleAmount}=useGlobalContext();
 
   return (
     <article className='cart-item'>
